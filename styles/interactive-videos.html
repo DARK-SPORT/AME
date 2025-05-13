@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <title>intertactiv page</title>
+  <link rel="stylesheet" href="assets/css/interactive.css">
+
+</head>
+
+
+<body>
+
+  <header>
+    <div class="logo"><img src="AME  LOGO (1).png" alt="AME"></div>
+    <nav class="welcome-nav">
+      <a href="index.html">welcome page</a>
+      <a href="about.html">About</a>
+      <a href="interactive-videos.html">Interactive Videos</a>
+      <a href="feelings.html">Feelings</a>
+      <a href="Tutorials.html">Tutorials</a>
+      <a href="unspoken-world.html">unspoken world</a>
+      <a href="meet-us.html">meet us</a>
+    </nav>
+  </header>
+
+
+  <style>
+
+    
+    .high-contrast {
+      background-color: black;
+      color: yellow;
+    }
+
+    .high-contrast a {
+      color: cyan;
+    }
+
+    .accessibility-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #d94d23;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+
+    .accessibility-panel {
+      position: fixed;
+      top: 4.5rem;
+      right: 1rem;
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      width: 250px;
+      z-index: 999;
+    }
+
+    .accessibility-panel.active {
+      display: block;
+    }
+
+    .accessibility-panel h3 {
+      margin-top: 0;
+    }
+
+    button.option {
+      margin: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="accessibility-toggle" onclick="togglePanel()">Accessibility</button>
+
+  <div class="accessibility-panel" id="accessibilityPanel">
+    <h3>Accessibility Options</h3>
+
+    <div>
+      <p><strong>Text Size:</strong></p>
+      <button class="option" onclick="setFontSize('small')">A-</button>
+      <button class="option" onclick="setFontSize('medium')">A</button>
+      <button class="option" onclick="setFontSize('large')">A+</button>
+    </div>
+
+    <div>
+      <p><strong>Contrast:</strong></p>
+      <button class="option" onclick="toggleContrast()">Toggle High Contrast</button>
+    </div>
+  </div>
+
+  <script>
+    function setFontSize(size) {
+      const body = document.body;
+      if (size === 'small') {
+        body.style.fontSize = '14px';
+      } else if (size === 'medium') {
+        body.style.fontSize = '16px';
+      } else if (size === 'large') {
+        body.style.fontSize = '18px';
+      }
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function togglePanel() {
+      const panel = document.getElementById('accessibilityPanel');
+      panel.classList.toggle('active');
+    }
+  </script>
+
+
+  <div class="main-content">
+    <h1>videos </h1>
+    </div>
+  </div>
+  
+  <div class="tutorial-grid">
+    <div class="tutorial-box">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="tutorial-box">
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="tutorial-box">
+      <video controls>
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  
+
+ 
+
+
+
+
+    <div class="poll">
+      <p class="poll-question">How did this video make you feel after watching it? Please select the option that best reflects your understanding:</p>
+      <form id="reactionForm">
+        <div class="reaction-box">
+          <label>
+            <input type="radio" name="reaction" value="understood">
+            😊 Helped me understand
+          </label>
+        </div>
+        <div class="reaction-box">
+          <label>
+            <input type="radio" name="reaction" value="confused">
+            😕 Confused a little
+          </label>
+        </div>
+        <div class="reaction-box">
+          <label>
+            <input type="radio" name="reaction" value="not-understood">
+            👎 Didn't understand at all
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+        <div id="feedback-box" class="feedback-box">✅ Your feedback has been recorded.</div>
+      </form>
+    </div>
+    
+  
+    <script>
+      document.getElementById('reactionForm').addEventListener('submit', function (e) {
+        e.preventDefault(); 
+        const message = document.getElementById('feedback-box');
+        message.style.display = 'block';
+      });
+    </script>
+
+
+<div id="guide-avatar" class="guide-avatar">
+  <img src="download.jpg" alt="Guide Character">
+  <div id="guide-message" class="guide-message">You're doing great! 🌟</div>
+</div>
+
+<script>
+  const guideMessages = [
+    "You're doing great! 🌟",
+    "why dont you watch the videos",
+    "You're almost there! 💪",
+    "are the videos helping"
+  ];
+
+  let index = 0;
+  setInterval(() => {
+    document.getElementById("guide-message").textContent = guideMessages[index];
+    index = (index + 1) % guideMessages.length;
+  }, 5000);
+</script>
+
+
+
+
+
+<footer>
+  <div class="logo"><img src="AME  LOGO (1).png" alt="AME"> 
+</footer>
+
+    
+  
+  
+  </body>
+  </html>
+  

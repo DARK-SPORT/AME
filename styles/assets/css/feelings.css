@@ -1,0 +1,198 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo img{
+    width: 120px;
+    margin-bottom: -30px;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #fff6e5;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;  
+    background-image: url(../../Behind-the-Autistic-Mask.webp);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* Header */
+header {
+    background-color: #fcc45d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 48px;
+    color: #e94f37;
+    margin-right: auto;
+}
+
+.welcome-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;  
+    margin-left: 0; 
+}
+
+.welcome-nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #e94f37;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.welcome-nav a:hover {
+    color: #d87322;  
+}
+
+
+main {
+    display: none;  
+}
+
+
+
+
+
+.card-section {
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 40px; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+    background: transparent;
+    width: 450px; 
+    height: 450px; 
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px; 
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 1.5rem; 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2); 
+}
+
+.flip-front {
+    background-color: #f0f0f0;
+    color: #444;
+}
+
+.flip-back {
+    background-color: #e94f37;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+.energy-container {
+    text-align: center;
+    background-color: #fff9e6;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  
+  .battery {
+    width: 100%;
+    height: 30px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    position: relative;
+    background: #eee;
+  
+    margin-top: 2rem; 
+  }
+  
+  
+  .battery::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 8px;
+    width: 6px;
+    height: 14px;
+    background: #555;
+    border-radius: 2px;
+  }
+  
+  .battery-level {
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50;
+    border-radius: 3px 0 0 3px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+
+
+
+
+
+
+ /* Footer */
+footer {
+    background-color: #fcc45d;
+    text-align: center;
+    padding: 0px;  
+    font-weight: bold;
+    color: #e94f37;
+    font-size: 24px;
+    position: absolute; 
+    bottom: -30px; 
+    width: 100%; 
+}
+
+  

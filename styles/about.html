@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AME - Autistic Masking</title>
+  <link rel="stylesheet" href="assets/css/about.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo"><img src="AME  LOGO (1).png" alt="AME"></div>
+    <nav class="welcome-nav">
+      <a href="index.html">welcome page</a>
+      <a href="about.html">About</a>
+      <a href="interactive-videos.html">Interactive Videos</a>
+      <a href="feelings.html">Feelings</a>
+      <a href="Tutorials.html">Tutorials</a>
+      <a href="unspoken-world.html">unspoken world</a>
+      <a href="meet-us.html">meet us</a>
+    </nav>
+  </header>
+
+
+
+
+
+  <style>
+
+    .high-contrast {
+      background-color: black;
+      color: yellow;
+    }
+
+    .high-contrast a {
+      color: cyan;
+    }
+
+    .accessibility-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #d94d23;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    
+    .accessibility-panel {
+      position: fixed;
+      top: 4.5rem;
+      right: 1rem;
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      width: 250px;
+      z-index: 999;
+    }
+
+    .accessibility-panel.active {
+      display: block;
+    }
+
+    .accessibility-panel h3 {
+      margin-top: 0;
+    }
+
+    button.option {
+      margin: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="accessibility-toggle" onclick="togglePanel()">Accessibility</button>
+
+ 
+  <div class="accessibility-panel" id="accessibilityPanel">
+    <h3>Accessibility Options</h3>
+
+    <div>
+      <p><strong>Text Size:</strong></p>
+      <button class="option" onclick="setFontSize('small')">A-</button>
+      <button class="option" onclick="setFontSize('medium')">A</button>
+      <button class="option" onclick="setFontSize('large')">A+</button>
+    </div>
+
+    <div>
+      <p><strong>Contrast:</strong></p>
+      <button class="option" onclick="toggleContrast()">Toggle High Contrast</button>
+    </div>
+  </div>
+
+  <script>
+    function setFontSize(size) {
+      const body = document.body;
+      if (size === 'small') {
+        body.style.fontSize = '14px';
+      } else if (size === 'medium') {
+        body.style.fontSize = '16px';
+      } else if (size === 'large') {
+        body.style.fontSize = '18px';
+      }
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function togglePanel() {
+      const panel = document.getElementById('accessibilityPanel');
+      panel.classList.toggle('active');
+    }
+  </script>
+
+
+  
+
+  <div class="wave-container">
+    <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#fcc45d" fill-opacity="0.4" d="M0,192L60,192C120,192,240,192,360,192C480,192,600,192,720,176C840,160,960,96,1080,101.3C1200,107,1320,181,1380,218.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+  </div>
+
+  
+  <div class="wave-container">
+    <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#fcc45d" fill-opacity="0.4"
+        d="M0,192L60,192C120,192,240,192,360,192C480,192,600,192,720,176C840,160,960,96,
+           1080,101.3C1200,107,1320,181,1380,218.7L1440,256L1440,320L1380,320C1320,320,1200,
+           320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,
+           60,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  
+
+
+  <main>
+    
+    <h1>What is autistic masking?</h1>
+    <p>
+      Masking is a strategy used by some autistic people, consciously or unconsciously, to appear non-autistic. While this strategy can help them get by at school, work and in social situations, it can have a devastating impact on mental health, sense of self and access to an autism diagnosis.
+    </p>
+
+    <body>
+
+      
+
+
+      <div class="buttons">
+        <button id="btn1">Why we made this?</button>
+        <button id="btn2">What this experience is about?</button>
+        <button id="btn3">What you can do here?</button>
+      </div>
+    
+
+      <div class="popup" id="popup1">
+        <div class="popup-content">
+          <span class="close" id="close1">&times;</span>
+          <p>Because masking is real and it’s rarely talked about in a way that captures the emotional side.
+            It’s not just a behaviour; it’s a burden.
+           This project is for anyone who wants to understand, connect, or reflect. It’s not about fixing anything. It’s about seeing what’s been hidden.</p>
+           <a href="https://www.healthline.com/health/autism/autism-masking#effects" target="_blank" style="color: #e94f37; font-weight: bold; text-decoration: underline;">
+            the effects of masking
+        </div>
+      </div>
+    
+      <div class="popup" id="popup2">
+        <div class="popup-content">
+          <span class="close" id="close2">&times;</span>
+          <p>This website lets you step into that world not just read about it.
+            Through a series of interactive videos and immersive scenarios, you’ll see what it feels like to navigate everyday spaces while masking. You’ll hear internal thoughts, feel the pressure to act “normal,” and sense the tension of hiding your true self.
+            We didn’t build this to explain autism. 
+            We built it to make you feel something.</p>
+            </a>
+        </div>
+      </div>
+    
+      <div class="popup" id="popup3">
+        <div class="popup-content">
+          <span class="close" id="close3">&times;</span>
+          <p>Explore interactive videos based on real experiences, listen to the unspoken thoughts behind the mask, share your own reflection through a live digital installation, and read what others have left behind.</p>
+        </div>
+      </div>
+    
+      <script>
+        
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+    
+        const popup1 = document.getElementById('popup1');
+        const popup2 = document.getElementById('popup2');
+        const popup3 = document.getElementById('popup3');
+    
+        const close1 = document.getElementById('close1');
+        const close2 = document.getElementById('close2');
+        const close3 = document.getElementById('close3');
+    
+        
+        btn1.onclick = function() {
+          popup1.style.display = 'flex';
+        }
+        btn2.onclick = function() {
+          popup2.style.display = 'flex';
+        }
+        btn3.onclick = function() {
+          popup3.style.display = 'flex';
+        }
+    
+        
+        close1.onclick = function() {
+          popup1.style.display = 'none';
+        }
+        close2.onclick = function() {
+          popup2.style.display = 'none';
+        }
+        close3.onclick = function() {
+          popup3.style.display = 'none';
+        }
+    
+        
+        window.onclick = function(event) {
+          if (event.target === popup1) {
+            popup1.style.display = 'none';
+          }
+          if (event.target === popup2) {
+            popup2.style.display = 'none';
+          }
+          if (event.target === popup3) {
+            popup3.style.display = 'none';
+          }
+        }
+      </script>
+    
+    </body>
+    
+
+    <div class="invitation-cards">
+      <div class="card">
+        <h1>a gentle invitation,</h1>
+        <p>This may feel unfamiliar, even uncomfortable... and that’s okay. </br> If you’ve ever felt the need to hide parts of yourself to be accepted, this will resonate. We're not here to preach. Just to show.</br>
+          And we're really glad you're here. </p>
+      </div>
+      <div class="card">
+        <h1>a gentle invitation,</h1>
+        <p>This may feel unfamiliar, even uncomfortable... and that’s okay. </br> If you’ve ever felt the need to hide parts of yourself to be accepted, this will resonate. We're not here to preach. Just to show.</br>
+          And we're really glad you're here. </p>
+        </div>
+      <div class="card">
+        <h1>a gentle invitation,</h1>
+        <p>This may feel unfamiliar, even uncomfortable... and that’s okay. </br> If you’ve ever felt the need to hide parts of yourself to be accepted, this will resonate. We're not here to preach. Just to show.</br>
+          And we're really glad you're here. </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="logo"><img src="AME  LOGO (1).png" alt="AME"> 
+  </footer>
+
+</body>
+</html>

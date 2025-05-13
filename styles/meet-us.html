@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page</title>
+  <link rel="stylesheet" href="assets/css/meet-us.css">
+  
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.92/build/spline-viewer.js"></script>
+
+</head>
+
+<body>
+  
+
+  
+  
+
+
+  <header>
+    <div class="logo"><img src="AME  LOGO (1).png" alt="AME"></div>
+    <nav class="welcome-nav">
+      <a href="index.html">welcome page</a>
+      <a href="about.html">About</a>
+      <a href="interactive-videos.html">Interactive Videos</a>
+      <a href="feelings.html">Feelings</a>
+      <a href="Tutorials.html">Tutorials</a>
+      <a href="unspoken-world.html">unspoken world</a>
+      <a href="meet-us.html">meet us</a>
+    </nav>
+  </header>
+
+  <style>
+
+
+    .high-contrast {
+      background-color: black;
+      color: yellow;
+    }
+
+    .high-contrast a {
+      color: cyan;
+    }
+
+
+    .accessibility-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #d94d23;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+
+    .accessibility-panel {
+      position: fixed;
+      top: 4.5rem;
+      right: 1rem;
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      width: 250px;
+      z-index: 999;
+    }
+
+    .accessibility-panel.active {
+      display: block;
+    }
+
+    .accessibility-panel h3 {
+      margin-top: 0;
+    }
+
+    button.option {
+      margin: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="accessibility-toggle" onclick="togglePanel()">Accessibility</button>
+
+
+  <div class="accessibility-panel" id="accessibilityPanel">
+    <h3>Accessibility Options</h3>
+
+    <div>
+      <p><strong>Text Size:</strong></p>
+      <button class="option" onclick="setFontSize('small')">A-</button>
+      <button class="option" onclick="setFontSize('medium')">A</button>
+      <button class="option" onclick="setFontSize('large')">A+</button>
+    </div>
+
+    <div>
+      <p><strong>Contrast:</strong></p>
+      <button class="option" onclick="toggleContrast()">Toggle High Contrast</button>
+    </div>
+  </div>
+
+  <script>
+    function setFontSize(size) {
+      const body = document.body;
+      if (size === 'small') {
+        body.style.fontSize = '14px';
+      } else if (size === 'medium') {
+        body.style.fontSize = '16px';
+      } else if (size === 'large') {
+        body.style.fontSize = '18px';
+      }
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function togglePanel() {
+      const panel = document.getElementById('accessibilityPanel');
+      panel.classList.toggle('active');
+    }
+  </script>
+
+  <h1>Meet the Team</h1>
+  <p>It's so nice for you to join us here, I hope we helped you understand the effects of masking! <br> 
+    Feel free to reuse the website as and when you wish! Let's stay kind.</p>
+
+  <div class="team-section">
+    <div class="team-member">
+      <h3>AHMED</h3>
+      <p>I did the visual effects for the videos<br>
+      and ensured your learning experience was informative.</p>
+    </div>
+
+    <div class="team-member">
+      <h3>HILARY</h3>
+      <p>I helped design the fun stuff for the site, was the creative director for the project,<br>
+      and made sure we stayed sensitive and friendly.</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ANTHONY</h3>
+      <p>I was the web developer, so make sure you use the accessibility<br>
+      features at least once!</p>
+    </div>
+  </div>
+
+
+  <spline-viewer class="background" url="https://prod.spline.design/3KGWQfKLPfpiqkMl/scene.splinecode"></spline-viewer>
+
+
+
+<footer>
+  <div class="logo"><img src="AME  LOGO (1).png" alt="AME"> 
+</footer>
+
+</body>
+</html>

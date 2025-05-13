@@ -1,0 +1,114 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 120px;
+  margin-bottom: -30px;
+}
+
+
+
+.welcome-container h1 {
+  font-size: 150px;
+  font-weight: bold;
+  color: #e94f37;
+  margin-top: 1120px; 
+  margin-left: -850px;
+  letter-spacing: -3px; 
+
+}
+
+
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #fcc45d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 48px;
+  color: #e94f37;
+  margin-right: auto;
+}
+
+.welcome-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;  
+  margin-left: 0;  
+}
+
+.welcome-nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #e94f37;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.welcome-nav a:hover {
+  color: #d87322;  
+}
+
+
+main {
+  display: none;  
+}
+
+
+
+
+.background {
+  position: absolute;
+  top: 340px;
+  left: 700px;
+  width: 50%;
+  height: 50%;
+  transform: rotate(deg);
+}
+
+
+h1 {
+  font-size: 4rem; 
+  text-align: center;
+  color: #d87322; 
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #fcc45d;
+  text-align: center;
+  padding: 0px;  
+  font-weight: bold;
+  color: #e94f37;
+  font-size: 24px;
+  position: absolute; 
+  bottom: -30px; 
+  width: 100%; 
+}
+

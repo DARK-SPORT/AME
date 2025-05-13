@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessibility Button Only</title>
+  <style>
+
+    /* High contrast mode */
+    .high-contrast {
+      background-color: black;
+      color: yellow;
+    }
+
+    .high-contrast a {
+      color: cyan;
+    }
+
+    /* Accessibility floating button */
+    .accessibility-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #d94d23;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    /* Panel styling */
+    .accessibility-panel {
+      position: fixed;
+      top: 4.5rem;
+      right: 1rem;
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      width: 250px;
+      z-index: 999;
+    }
+
+    .accessibility-panel.active {
+      display: block;
+    }
+
+    .accessibility-panel h3 {
+      margin-top: 0;
+    }
+
+    button.option {
+      margin: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="accessibility-toggle" onclick="togglePanel()">Accessibility</button>
+
+  <!-- Accessibility Options Panel -->
+  <div class="accessibility-panel" id="accessibilityPanel">
+    <h3>Accessibility Options</h3>
+
+    <div>
+      <p><strong>Text Size:</strong></p>
+      <button class="option" onclick="setFontSize('small')">A-</button>
+      <button class="option" onclick="setFontSize('medium')">A</button>
+      <button class="option" onclick="setFontSize('large')">A+</button>
+    </div>
+
+    <div>
+      <p><strong>Contrast:</strong></p>
+      <button class="option" onclick="toggleContrast()">Toggle High Contrast</button>
+    </div>
+  </div>
+
+  <script>
+    function setFontSize(size) {
+      const body = document.body;
+      if (size === 'small') {
+        body.style.fontSize = '14px';
+      } else if (size === 'medium') {
+        body.style.fontSize = '16px';
+      } else if (size === 'large') {
+        body.style.fontSize = '18px';
+      }
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function togglePanel() {
+      const panel = document.getElementById('accessibilityPanel');
+      panel.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
